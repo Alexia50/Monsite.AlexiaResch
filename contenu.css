@@ -1,0 +1,29 @@
+h1{color: midnightblue;text-align: center;}
+p {color: black ;}
+h2{color: darkgrey;}
+body {background-color: darkslategrey;
+    background-attachment: fixed;}
+
+h4 {color: #582900;
+    text-align: center;}
+p > strong {color: #582900;
+    font-weight: bolder}
+
+#bandeau{
+    background-image: url(./files/bandeau.jpg);
+    height: 100px;
+    width: auto;
+}
+#onglets li
+{float : left;
+    height : 21px;
+    background-color: #black;
+    margin : 1px 2px 0 2px;
+    border : 1px solid pink;}
+#onglets li.active
+{border-bottom: 2px solid #none;
+    background-color: pink;}
+}#onglets a.hover
+ {    background : #fff;}
+#menu
+{    border-bottom : 1px solid #9EA0A1; padding-bottom : 25px;}
