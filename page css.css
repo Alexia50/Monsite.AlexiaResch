@@ -14,11 +14,11 @@ body {
 
 .container {
     position: absolute;
-    top: 40%;
-    left: 50%;
+    top: 50%;
+    left: 60%;
     transform: translate(-50%,-50%);
-    width: 660px;
-    height: 500px;
+    width: 800px;
+    height: 800px;
     background: #f1f1f1;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0.5,0.5,0.5,0.5);
@@ -63,9 +63,6 @@ body {
 .contenu p {
     padding: 20px;
 }
-
-/* Anim */
-
 .active {
     background: midnightblue;
     color: #f1f1f1;
@@ -97,4 +94,52 @@ li::before{
   padding-right: 8px;
   color: green;
 }
+footer {
+    flex-shrink: 0;
+    border-top: 1px dashed #000;
+    width: 100%;
+    background: #fff;
+    color: #333;
+    margin-top: 80%;
+}
+
+.content-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+    padding: 50px 100px ;
+}
+/* .bloc {
+    flex-basis: 20%;
+    margin: 0 30px;
+} */
+.footer-contact h3,
+.footer-services h3,
+.footer-schedule h3,
+.footer-medias h3 {
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+.footer-contact p {
+    padding: 5px 0;
+}
+.services-list,
+.schedule-list,
+.media-list {
+    list-style-type: none;
+}
+.services-list li {
+    padding: 2px 0;
+}
+.services-list a {
+    text-decoration: none;
+    color: #333;
+}
+.services-list a:hover {
+    color: rgb(3,3,3);
+}
+
 </style>
