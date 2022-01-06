@@ -38,7 +38,7 @@ body {
     align-items: center;
     font-size: 22px;
     font-weight: 700;
-    cursor: pointer;
+    cursor:alias;
 }
 .onglets:not(:nth-child(5)) {
     border-right: 1px solid #333;
@@ -96,7 +96,7 @@ li::before{
 }
 footer {
     flex-shrink: 0;
-    border-top: 1px dashed #000;
+    border-top: 1000px dashed #fff;
     width: 100%;
     background: #fff;
     color: #333;
