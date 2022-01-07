@@ -104,13 +104,14 @@ footer {
 }
 
 .content-footer {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 10px;
+    margin: auto ;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     font-size: 16px;
     padding: 50px 0 100px;
+    
 }
 
 .bloc {
@@ -124,6 +125,7 @@ footer {
 .footer-medias h3 {
     font-size: 22px;
     padding-bottom: 20px;
+
 }
 .footer-contact p {
     padding: 5px 0;
