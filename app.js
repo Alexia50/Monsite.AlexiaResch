@@ -36,5 +36,22 @@ onglets.forEach(onglet => {
 
 
     })
+document.getElementByID("Contact").addEventListener("Souscription", function(e){
+        var erreur;
+        var inputs = document.getElementByTagName("input");
 
+        for (var i = 0; i < inputs.lengt; i++) {
+                console.log(inputs[i]);
+                if (!inputs[i].value) {
+                    erreur = "Veuillez renseigner tous les champs";
+                }
+        }
+        if (erreur) {
+            e.preventDefault();
+            document.getElementById("erreur").innerHTML = erreur;
+            return false;
+        } else {
+            alert('Formulaire de contact envoyé !')
+        }
+})
 })
