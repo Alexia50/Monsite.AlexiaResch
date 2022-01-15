@@ -4,9 +4,7 @@
     padding: 0;
 }
 
-html {
-    font-family: 'Poppins', sans-serif;
-}
+
 *tout {  font-family: 'Poppins', sans-serif;}
 
 body {
@@ -106,7 +104,7 @@ section#contact2 form textarea:hover {
 }
 section#contact2 form input,
 section#contact2 form textarea {
-    margin: 13px 0;
+    margin: 10px 30px;
     padding: 10px;
     box-sizing: border-box;
     border: none;
@@ -130,11 +128,10 @@ section#contact2 form button {
     font-weight: bold;
     font-size: 1cm;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: -10px;
     outline: none;
     text-align: center;
     transition: 0,2s;
-
 }
 section#contact2 form button:hover {
     transform: translate(-2px);
@@ -167,7 +164,11 @@ section#contact2 form button:hover {
 .contenu p {
     padding: 20px;
 }
-
+.contenu ul {
+    justify-content: center;
+    background: none;
+    border: none;
+}
 .active {
     background: midnightblue;
     color: #f1f1f1;
@@ -177,6 +178,7 @@ section#contact2 form button:hover {
 .activeContenu {
     animation: fade 0.5s forwards;
 }
+
 @keyframes fade {
     from {
       opacity: 0;
@@ -192,6 +194,17 @@ section#contact2 form button:hover {
     margin: 0px auto;
     border: 2px solid slategrey;
 }
+.table-competences{
+    border-collapse: collapse;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
+    cursor: pointer;
+    margin: 0px auto;
+    border: 2px solid slategrey;
+}
+.table-competences td { 
+    background-color: lightgray;
+}
+
 thead tr {
     background-color: slateblue;
     color: #fff;
@@ -207,18 +220,7 @@ tbody tr, td, th {
 tbody tr:nth-child(even){
     background-color: none;
 }
-/*@media screen and (max-width: 550px) {
-  body {
-    align-items: flex-start;
-  }
-  .table-style  {
-    width: 100%;
-    margin: 0px;
-    font-size: 10px;
-}
-  th, td {
-    padding: 10px 7px;
-}}*/
+
 .floating-btn {
     position: fixed;
     bottom: -10px;
@@ -297,10 +299,11 @@ footer {
 
 .footer-contact h3,
 .footer-services h3,
-.footer-schedule h3,
+.footer-planning h3,
 .footer-medias h3 {
     font-size: 22px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .footer-contact p {
@@ -318,7 +321,23 @@ footer {
     text-decoration: none;
     color: #333;
 }
-.services-list a:hover {
-    color: rgb(3,3,3);
+.content-footer {
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+.media-list {
+    position: relative;
+    right: 10px;
 }
 
+.media-list a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.bloc {
+    flex-basis: auto;
+    margin: 0px 10px;
+}
