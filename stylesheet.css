@@ -4,19 +4,17 @@
     padding: 0;
 }
 
-
 *tout {  font-family: 'Poppins', sans-serif;}
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f1f1f1;
-    height: 100vh;
+    background:  background-image: linear-gradient(22.5deg, rgba(66, 66, 66, 0.02) 0%, rgba(66, 66, 66, 0.02) 11%,rgba(135, 135, 135, 0.02) 11%, rgba(135, 135, 135, 0.02) 24%,rgba(29, 29, 29, 0.02) 24%, rgba(29, 29, 29, 0.02) 38%,rgba(15, 15, 15, 0.02) 38%, rgba(15, 15, 15, 0.02) 50%,rgba(180, 180, 180, 0.02) 50%, rgba(180, 180, 180, 0.02) 77%,rgba(205, 205, 205, 0.02) 77%, rgba(205, 205, 205, 0.02) 100%),linear-gradient(67.5deg, rgba(10, 10, 10, 0.02) 0%, rgba(10, 10, 10, 0.02) 22%,rgba(52, 52, 52, 0.02) 22%, rgba(52, 52, 52, 0.02) 29%,rgba(203, 203, 203, 0.02) 29%, rgba(203, 203, 203, 0.02) 30%,rgba(69, 69, 69, 0.02) 30%, rgba(69, 69, 69, 0.02) 75%,rgba(231, 231, 231, 0.02) 75%, rgba(231, 231, 231, 0.02) 95%,rgba(138, 138, 138, 0.02) 95%, rgba(138, 138, 138, 0.02) 100%),linear-gradient(112.5deg, rgba(221, 221, 221, 0.02) 0%, rgba(221, 221, 221, 0.02) 17%,rgba(190, 190, 190, 0.02) 17%, rgba(190, 190, 190, 0.02) 39%,rgba(186, 186, 186, 0.02) 39%, rgba(186, 186, 186, 0.02) 66%,rgba(191, 191, 191, 0.02) 66%, rgba(191, 191, 191, 0.02) 68%,rgba(16, 16, 16, 0.02) 68%, rgba(16, 16, 16, 0.02) 70%,rgba(94, 94, 94, 0.02) 70%, rgba(94, 94, 94, 0.02) 100%),linear-gradient(90deg, #ffffff,#ffffff);
 }
-
 .container {
     position: absolute;
-    top: 40%;
+    top: 60%;
     left: 50%;
+    bottom: 50%;
     transform: translate(-50%,-50%);
     width: 660px;
     height: 500px;
@@ -39,7 +37,7 @@ body {
     align-items: center;
     font-size: 18px;
     font-weight: 300;
-    cursor:alias;
+    cursor:pointer;
 }
 .onglets:not(:nth-child(5)) {
     border-right: 2px solid #D8BFD8;
@@ -53,7 +51,21 @@ body {
 }
 .contenu h3 {
     padding: 20px;
-    padding: 15px;
+}
+.contenu h2 {
+    text-decoration: none;
+    color: black;
+    text-align: right;
+    font-size: 20px;
+}
+.contenu h4 {
+    text-transform: none;
+    color: black;
+    text-decoration-color: none;
+    text-align: left;
+    padding: 5px 10px;
+    background: linear-gradient(to bottom right, #D8BFD8, transparent) ;
+
 }
 section#contact2 {
     background-color:#d6D6D6 ;
@@ -72,7 +84,8 @@ section#contact2 {
     height: 540px;
     padding: 30px 10px;
     border-radius: 15px;
-    box-shadow: 0px 10px 50px -10px #FEFEE2;
+     background: linear-gradient(to bottom right, #D8BFD8, transparent) ;
+     box-shadow: 0px 10px 50px -10px #D8BFD8;
     box-sizing: border-box;
     
 }
@@ -154,11 +167,14 @@ section#contact2 form button:hover {
 
 }}
 
+hr {
+    color: rebeccapurple}
+
 .contenu hr {
     width: 20%;
     height: 2px;
     margin-left: 20px;
-    background: #000;
+    color: rebeccapurple;
     border: none;
 }
 .contenu p {
@@ -174,7 +190,30 @@ section#contact2 form button:hover {
     color: #f1f1f1;
     transition: all 0.3s ease;
 }
+/*Partie avec mon nom et prenom*/
+.containerNom {
+    text-align: center;
+    perspective: 100px;
+}
 
+.containerNom h1 {
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    transform-style: preserve-3d;
+    display: inline-flex;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 60;
+    letter-spacing: 0px;
+    font-size: 40px;
+    cursor: pointer;
+}
+h1 span {
+    pointer-events: none;
+}
+.containerNom hr {
+    color: rebeccapurple;
+}
 .activeContenu {
     animation: fade 0.5s forwards;
 }
