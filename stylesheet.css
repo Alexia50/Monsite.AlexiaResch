@@ -232,6 +232,12 @@ h1 span {
     cursor: pointer;
     margin: 0px auto;
     border: 2px solid slategrey;
+    background:  linear-gradient(45deg,#D8BFD8, transparent);
+}
+.table-formation img{
+     width: 140px;
+    height: 60px;
+    position: left;
 }
 .table-competences{
     border-collapse: collapse;
@@ -262,18 +268,21 @@ tbody tr:nth-child(even){
 
 .floating-btn {
     position: fixed;
-    bottom: -10px;
-    right: 50px;
+    bottom: 20px;
+    right: 20px;
     width: 75px;
     height: 75px;
-    border: none ;
+    border: none;
     cursor: pointer;
     border-radius: 50%;
     background: linear-gradient(45deg,burlywood,palevioletred);
     display: flex  ;
     justify-content: center;
     align-items: center;
+    display: flex;
+    border-radius: 50%;
 }
+
 .floating-btn img {
     width: 75px;
     height: 75px;
