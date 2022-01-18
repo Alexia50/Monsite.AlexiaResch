@@ -1,52 +1,73 @@
-<?php
-if(isset($_POST['mailform']))
-{
-	if(!empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['message']))
-	{
-		$header="MIME-Version: 1.0\r\n";
-		$header.='From:"VOTRE NOM"<email-expediteur@example.org>'."\n";
-		$header.='Content-Type:text/html; charset="uft-8"'."\n";
-		$header.='Content-Transfer-Encoding: 8bit';
+<?php 
+ 
+// hCAPTCHA API key configuration 
+$siteKey = '2a0714e1-3e75-415f-853a-9338f2fc01c8'; 
 
-		$message='
-		<html>
-			<body>
-				<div align="center">
-					<u>Nom de l\'expéditeur :</u>'.$_POST['nom'].'<br />
-					<u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
-					<br />
-					'.nl2br($_POST['message']).'
-				</div>
-			</body>
-		</html>
-		';
+$secretKey = '0x1f2b4aBEB5C49445a7F405689EcaEAD268D5c2BE'; 
+ 
+// If the form is submitted 
+$postData = $statusMsg ="";
+$status ='error';
 
-		mail("email-destinataire@example.org", "CONTACT - Monsite.com", $message, $header);
-		$msg="Votre message a bien été envoyé !";
-	}
-	else
-	{
-		$msg="Tous les champs doivent être complétés !";
-	}
-}
+$statusMsg = ''; 
+if(isset($_POST['submit'])){ 
+     
+    // Validate form fields 
+    if(!empty($_POST['name']) && !empty($_POST['email'])){ 
+         
+        // Validate hCAPTCHA checkbox 
+        if(!empty($_POST['h-captcha-response'])){ 
+            // Verify API URL 
+            $verifyURL = 'https://hcaptcha.com/siteverify'; 
+             
+            // Retrieve token from post data with key 'h-captcha-response' 
+            $token = $_POST['h-captcha-response']; 
+             
+            // Build payload with secret key and token 
+            $data = array( 
+                'secret' => $secretKey, 
+                'response' => $token, 
+                'remoteip' => $_SERVER['REMOTE_ADDR'] 
+            ); 
+             
+            // Initialize cURL request 
+            // Make POST request with data payload to hCaptcha API endpoint 
+            $curlConfig = array( 
+                CURLOPT_URL => $verifyURL, 
+                CURLOPT_POST => true, 
+                CURLOPT_RETURNTRANSFER => true, 
+                CURLOPT_POSTFIELDS => $data 
+            ); 
+            $ch = curl_init(); 
+            curl_setopt_array($ch, $curlConfig); 
+            $response = curl_exec($ch); 
+            curl_close($ch); 
+             
+            // Parse JSON from response. Check for success or error codes 
+            $responseData = json_decode($response); 
+             
+            // If reCAPTCHA response is valid 
+            if($responseData->success){ 
+                // Posted form data 
+                $name = !empty($_POST['name'])?$_POST['name']:''; 
+                $email = !empty($_POST['email'])?$_POST['email']:''; 
+                $message = !empty($_POST['message'])?$_POST['message']:''; 
+                 
+                // Code to process the form data goes here... 
+                 
+                 
+                $statusMsg = 'Your contact request has submitted successfully.'; 
+            }else{ 
+                $statusMsg = 'Robot verification failed, please try again.'; 
+            } 
+        }else{ 
+            $statusMsg = 'Please check on the CAPTCHA box.'; 
+        } 
+    }else{ 
+        $statusMsg = 'Please fill all the mandatory fields.'; 
+    } 
+} 
+ 
+echo $statusMsg; 
+ 
 ?>
-<html>
-	<head>
-		<meta charset="utf-8" />
-	</head>
-	<body>
-		<h2>Formulaire de contact !</h2>
-		<form method="POST" action="">
-			<input type="text" name="nom" placeholder="Votre nom" value="<?php if(isset($_POST['nom'])) { echo $_POST['nom']; } ?>" /><br /><br />
-			<input type="email" name="mail" placeholder="Votre email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" /><br /><br />
-			<textarea name="message" placeholder="Votre message"><?php if(isset($_POST['message'])) { echo $_POST['message']; } ?></textarea><br /><br />
-			<input type="submit" value="Envoyer !" name="mailform"/>
-		</form>
-		<?php
-		if(isset($msg))
-		{
-			echo $msg;
-		}
-		?>
-	</body>
-</html>

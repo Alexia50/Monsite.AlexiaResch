@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title> Page de Alexia RESCH </title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="contact" href="contact.php">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
@@ -114,14 +115,16 @@
                 <h3>Interessé par mon profil ?</h3>
                 <h6> N'hésitez pas à me contacter !</h6>
             </div>
-        <form action="https://formsubmit.co/alexia.resch@sts-sio-caen.info" method="POST">
+        <form  action="https://formsubmit.co/alexia.resch@sts-sio-caen.info" method="POST">
           <input type="text" name="name" placeholder="Nom" required>
           <input type="email" name="email" placeholder="Email" required>
           <input type="text" name="number" placeholder="Numéro de telephone" required max="10">
           <hr><hr><hr><hr>
           <textarea type="text" name="subject" placeholder="Votre message" required=""></textarea> 
-
-          <button type="submit">Envoyer</button>
+            
+            <div class="h-captcha" data-sitekey="2a0714e1-3e75-415f-853a-9338f2fc01c8"></div>
+          
+          <button type="submit" value="Envoyer">Envoyer</button>
         </form>
        </section>
 
