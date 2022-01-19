@@ -70,8 +70,8 @@ body {
 
 
 hr {
-    color: D8BFD8;
-    border: none;
+    color: #D8BFD8;
+    border: 1px;
 }
 .contenu p {
     padding: 20px;
@@ -145,7 +145,7 @@ h1 span {
     transform-style: preserve-3d;
     transform: translateZ(-25px);
     transition: transform .25s;
-    background-color: #c8d2ff;
+    background-color: #D8BFD8;
 }
 
 .table-formation  {
@@ -157,9 +157,17 @@ h1 span {
     background: linear-gradient(to bottom right, #E6E6FA, transparent) ;
 }
 .table-formation img{
-     width: 100px;
-    height: 50px;
+    width: 130px;
+    height: 70px;
     position: left;
+}
+.table-formation button {
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    background-color: #c8d2ff;
 }
 .table-competences{
     border-collapse: collapse;
@@ -240,13 +248,13 @@ li{
 li::before{
   content: "•";
   padding-right: 4px;
-  color: green;
+  color: purple;
 }
 footer {
     flex-shrink: 0;
     border-top: 100px dashed #fff;
     width: 100%;
-    background: #fff;
+    background: linear-gradient(to bottom right, #E6E6FA, transparent) ;
     color: #333;
     position: bottom;
 }
@@ -258,7 +266,7 @@ footer {
     justify-content: center;
     align-items: flex-start;
     font-size: 16px;
-    padding: 50px 0 100px;
+    padding: 30px 0 10px;
 
 }
 
