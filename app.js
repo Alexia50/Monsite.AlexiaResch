@@ -74,35 +74,34 @@ function handleLetters(){
   })
 }
 
-// function animIn(){
-//   anime({
-//     targets: "h1 span",
-//     translateX: function(){
-//       return anime.random(-250,250)
-//     },
-//     translateY: function(){
-//       return anime.random(-250,250)
-//     },
-//     translateZ: function(){
-//       return anime.random(-2000,750)
-//     },
-//     rotate: function(){
-//       return anime.random(-250,250)
-//     },
-//     easing: "easeOutCirc",
-//     duration: 500
-//   })
-// }
-// function animOut(){
-//   anime({
-//     targets: "h1 span",
-//     translateX: 0,
-//     translateY: 0,
-//     translateZ: 0,
-//     rotate: 0,
-//     easing: "easeInQuad",
-//     duration: 500
-//   })
-// }
-// <script src="https://hcaptcha.com/1/api.js" async defer></script>
+function animIn(){
+  anime({
+    targets: "h1 span",
+    translateX: function(){
+      return anime.random(-250,250)
+    },
+    translateY: function(){
+      return anime.random(-250,250)
+    },
+    translateZ: function(){
+      return anime.random(-2000,750)
+    },
+    rotate: function(){
+      return anime.random(-250,250)
+    },
+    easing: "easeOutCirc",
+    duration: 500
+  })
+}
+function animOut(){
+  anime({
+    targets: "h1 span",
+    translateX: 0,
+    translateY: 0,
+    translateZ: 0,
+    rotate: 0,
+    easing: "easeInQuad",
+    duration: 500
+  })
+}
 

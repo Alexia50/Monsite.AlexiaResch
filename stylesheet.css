@@ -28,7 +28,7 @@ body {
     width: 100%;
     height: 100px;
     display: flex;
-    border-bottom: 2px solid slateblue;
+    border-bottom: 2px solid rebeccapurple;
 }
 .onglets {
     width: 180px;
@@ -42,7 +42,36 @@ body {
 .onglets:not(:nth-child(5)) {
     border-right: 2px solid #D8BFD8;
 }
-
+/*test*/
+.accueil h5{
+    font-size:30px ;
+    color: rebeccapurple ;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-left: 30px;
+    justify-content: center;
+}
+.media-container{
+    display: flex;
+    padding-left:130px ;
+    margin: 20px 0 40px 0;
+}
+.medias-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.icones {
+    padding-top: 50px;
+    width: 80px;
+}
+/*fin test*/
 .contenu {
     height: 70%;
     width: 100%;
@@ -64,8 +93,7 @@ body {
     text-decoration-color: none;
     text-align: left;
     padding: 5px 10px;
-    background: linear-gradient(to bottom right, #D8BFD8, transparent) ;
-
+    background: linear-gradient(to bottom right, #D8BFD8, transparent);
 }
 
 
@@ -93,7 +121,7 @@ hr {
 }
 
 .containerNom h1 {
-    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    font-family: Poppins,serif;
     transform-style: preserve-3d;
     display: inline-flex;
     margin-top: 5px;
@@ -134,6 +162,11 @@ h1 span {
     height: 70px;
     position: left;
 }
+.table-experience h2{
+    text-shadow: 2px;
+    text-align: center;
+}
+
 .table-experience td,th { 
     background-color: linear-gradient(45deg,burlywood, transparent);
     padding: 5px 10px;
