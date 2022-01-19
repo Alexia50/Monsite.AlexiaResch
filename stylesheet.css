@@ -40,7 +40,7 @@ body {
     cursor:pointer;
 }
 .onglets:not(:nth-child(5)) {
-    border-right: 2px solid #D8BFD8;
+   border-right: 2px solid #D8BFD8;
 }
 /*test*/
 .accueil h5{
@@ -96,7 +96,6 @@ body {
     background: linear-gradient(to bottom right, #D8BFD8, transparent);
 }
 
-
 hr {
     color: #D8BFD8;
     border: 1px;
@@ -125,7 +124,7 @@ hr {
     transform-style: preserve-3d;
     display: inline-flex;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #333;
     font-weight: 60;
     letter-spacing: 0px;
@@ -234,8 +233,8 @@ thead tr {
 
 .floating-btn {
     position: fixed;
-    bottom: -10px;
-    right: 50px;
+    bottom: 40px;
+    right: 60px;
     width: 75px;
     height: 75px;
     border: none ;
@@ -257,7 +256,7 @@ thead tr {
     background: lightpink;
     padding: 10px;
     font-size: 18px;
-    border-radius: 3px;
+    border-radius: 10px;
     line-height: left;
     width: 250px;
     transform: translate(-180px,-50%);
@@ -314,17 +313,16 @@ section#contact2 {
 }
 section#contact2 {
     padding:  100px 0;
-    max-width: 1100px;
-    margin 0px auto;
-    display flex;
-    flex-direction: column;
+    max-width: 1500px;
+    display: block;
+    flex-direction: initial;
     align-items: center;
     flex-direction: row-reverse;
     height: 540px;
     padding: 30px 10px;
     border-radius: 15px;
-     background: linear-gradient(to bottom right,#9370DB , transparent) ;
-     box-shadow: 0px 10px 50px -10px #D8BFD8;
+    background: linear-gradient(to bottom right,#9370DB , transparent) ;
+    box-shadow: 0px 10px 50px -10px #D8BFD8;
     box-sizing: border-box;
 }
 section#contact2 .titlec {
