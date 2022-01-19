@@ -69,13 +69,210 @@ body {
 }
 
 
+hr {
+    color: D8BFD8;
+    border: none;
+}
+.contenu p {
+    padding: 20px;
+}
+.contenu ul {
+    justify-content: center;
+    background: none;
+    border: none;
+}
+.active {
+    background: #9370DB;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+/*Partie avec mon nom et prenom*/
+.containerNom {
+    text-align: center;
+    perspective: 100px;
+}
 
+.containerNom h1 {
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    transform-style: preserve-3d;
+    display: inline-flex;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 60;
+    letter-spacing: 0px;
+    font-size: 40px;
+    cursor: pointer;
+}
+h1 span {
+    pointer-events: none;
+}
+
+.activeContenu {
+    animation: fade 0.5s forwards;
+}
+
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.table-experience  {
+    border-collapse: collapse;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
+    cursor: pointer;
+    margin: 0px auto;
+    border: 2px solid lightgray;
+    background: linear-gradient(to bottom right, #D8BFD8, transparent) ;
+
+}
+.table-experience img{
+    width: 110px;
+    height: 70px;
+    position: left;
+}
+.table-experience td,th { 
+    background-color: linear-gradient(45deg,burlywood, transparent);
+    padding: 5px 10px;
+    text-align: center;
+}
+.table-experience button {
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    background-color: #c8d2ff;
+}
+
+.table-formation  {
+    border-collapse: collapse;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
+    cursor: pointer;
+    margin: 0px auto;
+    border: 2px solid slategrey;
+    background: linear-gradient(to bottom right, #E6E6FA, transparent) ;
+}
+.table-formation img{
+     width: 100px;
+    height: 50px;
+    position: left;
+}
+.table-competences{
+    border-collapse: collapse;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
+    cursor: pointer;
+    margin: 0px auto;
+    border: 2px solid slategrey;
+    background: linear-gradient(to bottom right, #DDA0DD, transparent) ;
+
+}
+.table-competences td { 
+    background-color: lightgray;
+}
+
+thead tr {
+    background-color: slateblue;
+    color: #fff;
+    text-align: left;
+}
+.table-competences th, td {
+    padding: 5px 10px;
+    text-align: center;
+}
+.table-competences tbody tr, td, th {
+    border: 1px solid #ddd;
+}
+.table-competences tbody tr:nth-child(even){
+    background: linear-gradient(to bottom right, #E6E6FA, transparent) ;
+
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: -10px;
+    right: 50px;
+    width: 75px;
+    height: 75px;
+    border: none ;
+    cursor: pointer;
+    border-radius: 50%;
+    background: linear-gradient(45deg,burlywood,palevioletred);
+    display: flex  ;
+    justify-content: center;
+    align-items: center;
+}
+.floating-btn img {
+    width: 75px;
+    height: 75px;
+    justify-content: center;
+    position: fixed;
+}
+.floating-btn .downloadcv {
+    position: absolute;
+    background: lightpink;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    line-height: left;
+    width: 250px;
+    transform: translate(-180px,-50%);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    display: none;
+    visibility: hidden;
+}
+.floating-btn:hover .downloadcv{
+    display: block;
+    visibility: visible;
+}
+ul{
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+}
+li{
+  padding-left: 5px;
+}
+li::before{
+  content: "•";
+  padding-right: 4px;
+  color: green;
+}
+footer {
+    flex-shrink: 0;
+    border-top: 100px dashed #fff;
+    width: 100%;
+    background: #fff;
+    color: #333;
+    position: bottom;
+}
+
+.content-footer {
+    max-width: 10px;
+    margin: auto ;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+    padding: 50px 0 100px;
+
+}
+
+.bloc {
+    flex-basis: 20%;
+    margin: 0 30px;
+}
 section#contact2 {
     background-color:#d6D6D6 ;
     padding: 100px 15px ;
 
 }
 section#contact2 {
+    
     padding:  100px 0;
     max-width: 1100px;
     margin 0px auto;
@@ -86,7 +283,7 @@ section#contact2 {
     height: 540px;
     padding: 30px 10px;
     border-radius: 15px;
-     background: linear-gradient(to bottom right, #D8BFD8, transparent) ;
+     background: linear-gradient(to bottom right,#9370DB , transparent) ;
      box-shadow: 0px 10px 50px -10px #D8BFD8;
     box-sizing: border-box;
     
@@ -168,187 +365,6 @@ section#contact2 form button:hover {
     font-size: 20px;
 
 }}
-
-hr {
-    color: rebeccapurple}
-
-.contenu hr {
-    width: 20%;
-    height: 2px;
-    margin-left: 20px;
-    color: rebeccapurple;
-    border: none;
-}
-.contenu p {
-    padding: 20px;
-}
-.contenu ul {
-    justify-content: center;
-    background: none;
-    border: none;
-}
-.active {
-    background: #9370DB;
-    color: #f1f1f1;
-    transition: all 0.3s ease;
-}
-/*Partie avec mon nom et prenom*/
-.containerNom {
-    text-align: center;
-    perspective: 100px;
-}
-
-.containerNom h1 {
-    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
-    transform-style: preserve-3d;
-    display: inline-flex;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    color: #333;
-    font-weight: 60;
-    letter-spacing: 0px;
-    font-size: 40px;
-    cursor: pointer;
-}
-h1 span {
-    pointer-events: none;
-}
-.containerNom hr {
-    color: rebeccapurple;
-}
-.activeContenu {
-    animation: fade 0.5s forwards;
-}
-
-@keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-.table-formation  {
-    border-collapse: collapse;
-    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
-    cursor: pointer;
-    margin: 0px auto;
-    border: 2px solid slategrey;
-    background:  linear-gradient(45deg,#D8BFD8, transparent);
-}
-.table-formation img{
-     width: 140px;
-    height: 60px;
-    position: left;
-}
-.table-competences{
-    border-collapse: collapse;
-    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
-    cursor: pointer;
-    margin: 0px auto;
-    border: 2px solid slategrey;
-}
-.table-competences td { 
-    background-color: lightgray;
-}
-
-thead tr {
-    background-color: slateblue;
-    color: #fff;
-    text-align: left;
-}
-th, td {
-    padding: 5px 10px;
-    text-align: center;
-}
-tbody tr, td, th {
-    border: 1px solid #ddd;
-}
-tbody tr:nth-child(even){
-    background-color: none;
-}
-
-.floating-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 75px;
-    height: 75px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    background: linear-gradient(45deg,burlywood,palevioletred);
-    display: flex  ;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    border-radius: 50%;
-}
-
-.floating-btn img {
-    width: 75px;
-    height: 75px;
-    justify-content: center;
-    position: fixed;
-}
-.floating-btn .downloadcv {
-    position: absolute;
-    background: lightpink;
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 3px;
-    line-height: left;
-    width: 250px;
-    transform: translate(-180px,-50%);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    pointer-events: none;
-    display: none;
-    visibility: hidden;
-}
-.floating-btn:hover .downloadcv{
-    display: block;
-    visibility: visible;
-}
-
-
-ul{
-  list-style-type:none;
-  padding: 0;
-  margin: 0;
-}
-li{
-  padding-left: 5px;
-}
-li::before{
-  content: "•";
-  padding-right: 4px;
-  color: green;
-}
-footer {
-    flex-shrink: 0;
-    border-top: 100px dashed #fff;
-    width: 100%;
-    background: #fff;
-    color: #333;
-    position: bottom;
-}
-
-.content-footer {
-    max-width: 10px;
-    margin: auto ;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 16px;
-    padding: 50px 0 100px;
-
-}
-
-.bloc {
-    flex-basis: 20%;
-    margin: 0 30px;
-}
-
 .footer-contact h3,
 .footer-services h3,
 .footer-planning h3,
