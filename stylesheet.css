@@ -313,7 +313,6 @@ section#contact2 {
 
 }
 section#contact2 {
-    
     padding:  100px 0;
     max-width: 1100px;
     margin 0px auto;
@@ -327,7 +326,6 @@ section#contact2 {
      background: linear-gradient(to bottom right,#9370DB , transparent) ;
      box-shadow: 0px 10px 50px -10px #D8BFD8;
     box-sizing: border-box;
-    
 }
 section#contact2 .titlec {
     text-align: center;
