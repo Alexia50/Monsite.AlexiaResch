@@ -54,7 +54,7 @@ body {
 .media-container{
     display: flex;
     padding-left:130px ;
-    margin: 20px 0 40px 0;
+    margin: 20px 0 30px 0;
 }
 /*.titreaccueil img {
     width: 10px;
@@ -63,8 +63,8 @@ body {
     justify-items: right;
 }*/
 .medias-btn {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #333;
     display: flex;
@@ -74,12 +74,12 @@ body {
     cursor: pointer;
 }
 .icones {
-    padding-top: 50px;
+    padding-top: 40px;
     width: 80px;
 }
 /*fin test*/
 .contenu {
-    height: 70%;
+    height: 60%;
     width: 100%;
     position: absolute;
     opacity: 0;
