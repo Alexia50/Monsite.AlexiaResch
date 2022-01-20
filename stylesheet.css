@@ -425,6 +425,14 @@ section#contact2 form button:hover {
 .media-list {
     list-style-type: none;
 }
+.media-list button {
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    background-color: #c8d2ff;
+}
 .services-list li {
     padding: 2px 0;
 }
